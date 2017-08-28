@@ -1,0 +1,15 @@
+{
+  "name": "server_api",
+  "version": "1.0.0",
+  "description": "crm server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "UNLICENSED",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.15.3",
+    "uuid": "^3.1.0"
+  }
+}

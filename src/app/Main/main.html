@@ -1,0 +1,39 @@
+<h1>{{Title}}</h1>
+<br>Your Session ID is {{sessionID}}
+<br> Name:{{currentUser.firstName}}
+<br> SurName:{{currentUser.lastName}}
+<br> Email:{{currentUser.email}}
+<br> Phone:{{currentUser.phone}}
+<br> Type:{{currentUser.type}}
+<br> Group:{{currentUser.group}}
+
+<button class="btn btn-default" (click)="getUsers()">Get Users</button>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Type</th>
+            <th>Group</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.type}}</td>
+            <td>{{user.group}}</td>
+        </tr>
+    </tbody>
+</table>

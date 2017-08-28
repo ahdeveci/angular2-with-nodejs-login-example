@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <div style="text-align: center">
+            <h1>{{title}}</h1>
+        </div>
+        <div  style="padding-top:40px;padding-bottom:40px;padding-left:40px; padding-right:40px;border: gold; border-style: solid; border-width: medium;border-radius: 10px;">
+            <div class="row">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="username">User Name</label>
+                        <input id="username" type="text" class="form-control" placeholder="User Name" [(ngModel)]="loginUser.userName" [ngModelOptions]="{standalone: true}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">User Name</label>
+                        <input id="password" type="password" class="form-control" placeholder="********" [(ngModel)]="loginUser.password" [ngModelOptions]="{standalone: true}"/>
+                    </div>
+                    <button class="btn btn-primary pull-right" (click)="login()">Login</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-lg-4"></div>
+</div>
