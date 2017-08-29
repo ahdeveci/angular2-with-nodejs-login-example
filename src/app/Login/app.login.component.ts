@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
  title="Login Sayfası";
  loginUser:UserModel;
-
+ error={state:false,message:""}
  ngOnInit() { }
 
  login(){
@@ -30,9 +30,15 @@ export class LoginComponent implements OnInit {
             console.log(data)
             let res=JSON.parse(JSON.stringify(data));
             if(res.control==="Ok")
-            localStorage.setItem('currentUser', JSON.stringify(res.user));
-            localStorage.setItem('sessionID', JSON.stringify(res.sessionID));
-            this.router.navigate(['/main'])
+            {
+              localStorage.setItem('currentUser', JSON.stringify(res.user));
+              localStorage.setItem('sessionID', JSON.stringify(res.sessionID));
+              this.router.navigate(['/main'])
+            }
+            else{
+              this.error.state=true;
+              this.error.message=res.control;
+             }
            },
             error=>console.log(error),
             ()=>"Finished"
