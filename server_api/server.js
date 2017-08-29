@@ -72,7 +72,7 @@ app.post("/loginCtrl", function(req,res) {
     }
     else res.json(
         {
-            control     :"Fail",
+            control     :"Username or password is wrong!",
             sessionID   : "",
             user        : null
         });
