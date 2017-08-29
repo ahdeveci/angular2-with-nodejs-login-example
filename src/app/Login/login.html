@@ -15,6 +15,7 @@
                         <label for="password">User Name</label>
                         <input id="password" type="password" class="form-control" placeholder="********" [(ngModel)]="loginUser.password" [ngModelOptions]="{standalone: true}"/>
                     </div>
+                    <div class="text-danger" *ngIf="error.state">{{error.message}}</div>
                     <button class="btn btn-primary pull-right" (click)="login()">Login</button>
                 </form>
             </div>
